@@ -1,0 +1,610 @@
+  @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://  dub.sh) – all credits go to them! 
+*/
+
+*{
+  font-family: 'Geologica', sans-serif;
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+    font-family: 'Geologica', sans-serif;
+  @apply relative z-10 flex justify-center items-center flex-col mx-auto ;
+}
+
+.black_btn {
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm  flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm  flex items-center justify-center;
+}
+
+.head_text {
+  @apply sm:mt-28 md:mt-32 font-extrabold leading-[1.15] text-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-5xl  ;
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5  pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+.prompt_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Form Component */
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+/* Nav Component */
+.logo_text {
+  @apply max-sm:hidden  font-semibold text-lg text-black tracking-wide;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm  text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* PromptCard Component */
+.prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+
+
+
+#wrapper-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+#scroll-down {
+  display: block;
+  position: relative;
+  padding-top: 79px;
+  text-align: center;
+  cursor: pointer;
+}
+.arrow-down {
+  display: block;
+  margin: 0 auto;
+  width: 10px;
+  height: 32px;
+  
+}
+.arrow-down:after {
+  content: '';
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-color: rgb(57, 55, 55);
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+#scroll-down::before {
+  -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Safari 4+ */
+
+  -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Fx 5+ */
+
+  -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* Opera 12+ */
+
+  animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  /* IE 10+, Fx 29+ */
+
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 50px;
+  content: ' ';
+  background: rgb(57, 55, 55);
+}
+@-webkit-keyframes elasticus {
+  0% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+  50% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50.1% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+}
+@-moz-keyframes elasticus {
+  0% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+  50% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50.1% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+}
+@-o-keyframes elasticus {
+  0% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+  50% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50.1% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+}
+@keyframes elasticus {
+  0% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+  50% {
+      -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -o-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  50.1% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+      -moz-transform: scale(1, 1);
+      -o-transform: scale(1, 1);
+      transform: scale(1, 1);
+  }
+  100% {
+      -webkit-transform-origin: 0% 100%;
+      -ms-transform-origin: 0% 100%;
+      -moz-transform-origin: 0% 100%;
+      -o-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+      -moz-transform: scale(1, 0);
+      -o-transform: scale(1, 0);
+      transform: scale(1, 0);
+  }
+}
+
+
+
+.cursor::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  animation: cursor 0.6s linear infinite alternate;
+  will-change: opacity;
+}
+ 
+@keyframes cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+ 
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+/* global.css circle*/
+
+.my-div {
+  background-color: #e3e1b9;
+  mix-blend-mode: luminosity;
+  border-radius: 9999px;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 2px -3px 4px rgba(0, 0, 0, 0.25), inset -2px 3px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.my-div-hero {
+  background-color: #c4dde1;
+  mix-blend-mode: luminosity;
+  border-radius: 9999px;
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 2px -3px 4px rgba(0, 0, 0, 0.25), inset -2px 3px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.my-img {
+  width: 66%;
+  height: 66%;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+
+
+
+
+/* wave*/
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+      transform: rotate(0.0deg);
+  }
+
+  10% {
+      transform: rotate(14.0deg);
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+      transform: rotate(-8.0deg);
+  }
+
+  30% {
+      transform: rotate(14.0deg);
+  }
+
+  40% {
+      transform: rotate(-4.0deg);
+  }
+
+  50% {
+      transform: rotate(10.0deg);
+  }
+
+  60% {
+      transform: rotate(0.0deg);
+  }
+
+  /* Reset for the last half to pause */
+  100% {
+      transform: rotate(0.0deg);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.mb-1 {
+  animation-delay: 2s;
+}
+
+.mb-2 {
+  animation-delay: 5s;
+}
+
+.mb-3 {
+  animation-delay: 7s;
+}
+
+/*navbar new*/
+
+@layer components {
+  /* Header */
+  .scrolled {
+      @apply shadow-xl bg-purple-50 border-black w-[85%] sm:w-[80%] md:w-[70%] lg:w-[60%] rounded-[1.5rem] bg-opacity-75 backdrop-blur-md lg:rounded-[2rem] top-4 mx-auto drop-shadow-lg;
+    }
+    .head {
+      @apply font-medium sticky transition-all duration-1000 ease-linear mx-auto z-40 text-black;
+    }
+    .childHeader{
+      @apply flex duration-700 transition-all ease-in justify-between items-center py-2 sm:py-3 md:py-4 mx-auto px-4 sm:px-6 md:px-8 lg:px-16 max-w-7xl w-full;
+    }
+    .mobParent{
+      @apply flex flex-col  space-y-8 md:hidden;
+    }
+    .mdParent {
+      @apply hidden md:flex space-x-12 items-center justify-center text-base;
+    }
+    .mob{
+      @apply fixed z-40 top-4 -left-0 w-full h-screen bg-white;
+    }
+    .mobCross {
+      @apply w-9 h-9 xs:w-10 xs:h-10 stroke-2 fill-gray-700 text-gray-800 border-2 rounded-lg border-slate-500 p-2;
+    }
+    .mobRef {
+      @apply flex md:hidden flex-col mx-auto items-center space-y-12 justify-start pt-12 text-gray-700 px-6 py-[-1.5rem] w-full h-full bg-gradient-to-tr from-purple-100/60 to-purple-100/30;
+    } 
+    .mobChild {
+      @apply flex flex-col space-y-12 items-center justify-center text-base;
+    }
+    .mobLink {
+      @apply flex flex-col space-y-12 items-center justify-center text-base border-indigo-500 hover:border-b-2;
+    }
+    .resume {
+      @apply flex flex-col space-y-12 items-center justify-center text-base border-indigo-500 hover:border-b-2;
+    }
+  }
+
+    /*hero img*/
+
+    .my-custom-bg-class{
+      background-image: url(/assets/images/bg_mainz.jpg);
+    }
