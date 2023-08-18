@@ -17,7 +17,7 @@ const Portfolio = () => {
                 <div className="pt-20 mx-auto ">
                     <div className=" relative sm:w-[95%] md:w-[80%] mx-auto h-40 sm:h-44 md:h-56 lg:h-80 ">
                         <Image
-                            src={'/assets/images/porfolio_img.png'}
+                            src={'/assets/images/porfolio2_img.png'}
                             fill
                             // placeholder="blur"
                             sizes="(max-width: 768px) 100vw,
@@ -61,7 +61,7 @@ const Portfolio = () => {
                         <div className="hover:text-purple-400 flex mx-auto space-x-2 md:space-x-3 items-center">
                             <SiGithub className=" w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                             <a
-                                href="https://github.com/yasier-ansari/portfolio-website"
+                                href="https://github.com/Rahil2892/portfolio_2.0"
                                 target="blank"
                                 rel="noopener noreferrer"
                             >

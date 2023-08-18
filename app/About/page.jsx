@@ -5,7 +5,7 @@ import CategoryCard from "@components/CategoryCard"
 export default function About() {
     return (
         <>
-            <main className="lg:mb-12 lg:px-64 mx-auto  max-w-screen ">
+            <main className="lg:mb-12 px-8 lg:px-64 mx-auto  max-w-screen ">
                 <div className=" mx-auto pt-8 -pb-10 max-w-7xl">
                     <div className=" mx-auto flex flex-col ">
                         <h2
@@ -15,7 +15,7 @@ export default function About() {
                         </h2>
                         <div className="mx-auto transition-all duration-1000 ease-in-out -mt-8 shadow-2xl shadow-purple-200 ">
                             <Image
-                                src='/assets/images/img_ed_main.jpg'
+                                src='/assets/images/rahilAnim.jpg'
                                 height={320}
                                 width={320}
                                 className="object-cover rounded-2xl select-none drop-shadow-md shadow-purple-200 shadow-2xl h-28 w-28 md:h-32 md:w-32 lg:h-40 lg:w-40 border-white border-2"

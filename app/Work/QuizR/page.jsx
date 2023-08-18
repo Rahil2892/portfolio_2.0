@@ -17,7 +17,7 @@ const QuizR = () => {
                 <div className="pt-20 mx-auto ">
                     <div className=" relative sm:w-[95%] md:w-[80%] mx-auto h-40 sm:h-44 md:h-56 lg:h-80 ">
                         <Image
-                            src={'/assets/images/QuizR_img.png'}
+                            src={'/assets/images/QZR_img.png'}
                             fill
                             // placeholder="blur"
                             sizes="(max-width: 768px) 100vw,

@@ -21,7 +21,7 @@ export default function Work() {
                         link={'/Work/Portfolio'}
                         description={`full of life & colorful website you're seeing right now, is also a work of mine 😁😉`}
                         arr={[1, null, null, 1, 1, null, null, null]}
-                        img={'/assets/images/porfolio_img.png'}
+                        img={'/assets/images/porfolio2_img.png'}
                         alt={"portoflio-website"}
                         
                     />
@@ -31,7 +31,7 @@ export default function Work() {
                         link={'/Work/QuizR'}
                         description={`fun & entertaining quiz game that consists a bit of brainstroming  💭🧠`}
                         arr={[1, null, 1, null, 1, 1, null, null]}
-                        img={'/assets/images/QuizR_img.png'}
+                        img={'/assets/images/QZR_img.png'}
                         alt={"quizr-website"}
                         
                     />

@@ -45,7 +45,7 @@ const Home = () => {
      <div className="w-full flex flex-col justify-center  lg:flex-row md:pt-12 lg:space-x-20 items-center lg:justify-between px-none sm:px-16">
      <div className="mx-auto transition-all duration-1000 ease-in-out -mt-8 ">
                             <Image
-                                src='/assets/images/img_ed_main.jpg'
+                                src='/assets/images/rahilAnim.jpg'
                                 height={320}
                                 width={320}
                                 className="object-cover rounded-full select-none drop-shadow-md shadow-purple-200 shadow-2xl h-32 w-32 md:h-48 md:w-48 lg:h-64 lg:w-64 border-white border-2"
