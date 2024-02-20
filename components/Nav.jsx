@@ -33,7 +33,7 @@ export default function Header() {
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'rahil_resume.pdf';
+                alink.download = 'rahil-resume-2.pdf';
                 alink.click();
             })
         })
