@@ -26,7 +26,7 @@ export default function Header() {
 
 	const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('rahil_resume.pdf').then(response => {
+        fetch('rahil-resume-2.pdf').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
