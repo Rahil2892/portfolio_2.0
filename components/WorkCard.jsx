@@ -23,22 +23,20 @@ const WorkCard = (props) => {
     return (
         <div className="flex overflow-hidden rounded-lg md:rounded-2xl lg:rounded-3xl">
         	<div	className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto bg-gradient-to-tr  from-[#fbffee] via-[#fbf5ff] to-[#fff2ec] lg:bg-gradient-to-tr">
-		<div className="w-full md:w-1/3  grid place-items-center">
-        <Link
-                href={`${props.link}`}
-                className="relative flex items-center shadow-md  drop-shadow-xl h-32 xs:basis-[40%] rounded-lg md:rounded-2xl lg:rounded-3xl overflow-hidden  "
-            >
-                <img
-                    src={props.img}
-                    fill
-                    sizes="(max-width: 768px) 100vw,
-          (max-width: 1200px) 50vw,
-          33vw"
-                    alt={props.alt}
-                    className="object-cover select-none rounded-lg md:rounded-2xl lg:rounded-3xl hover:scale-[1.1] transition-all duration-300 ease-linear "
-                />
-            </Link>
-    </div>
+<div className="w-full md:w-1/3 grid place-items-center">
+  <Link
+    href={`${props.link}`}
+    className="relative flex items-center justify-center shadow-md drop-shadow-xl h-24 w-full xs:basis-[40%] rounded-xl overflow-hidden"
+  >
+    <Image
+      src={props.img}
+      fill
+      alt={props.alt}
+      className="object-cover select-none rounded-xl hover:scale-[1.1] transition-all duration-300 ease-linear"
+    />
+  </Link>
+</div>
+
 			<div className="w-full md:w-2/3  flex flex-col space-y-2 p-3">
 				<div className="flex justify-between item-center">
                 <div className="flex flex-row space-x-1 md:space-x-2 justify-between">

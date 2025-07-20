@@ -38,21 +38,39 @@ export default function About() {
                         Greetings to all 👋, I am Rahil, a proficient web developer
                         and UI-UX designer driven by a profound passion for crafting intuitive
                         and functional applications, with a strong advocacy for clean code principles.
-                        Presently, I am pursuing a 4-year Bachelors program - B.E. - and I am based in Mumbai.
+                        Presently, I am developer at Mouthshut and completed my 4-year Bachelors program - B.E. - and I am based in Mumbai.
                         </p>
 
                         <ul className=" list-disc mb-8">
                             <span className="text-gray-400 select-none font-semibold mb-1 ">Current</span>
                             <li className="pb-12">
+                                I am a Backend Developer at
+                                <span className=" bg-gradient-to-tr font-bold from-violet-500 via-fuchsia-400 to-purple-500 bg-clip-text text-transparent text-xl  mx-1 ">
+                                   Mouthshut.Com,
+                                </span>
+                                and I’m in the process of learning new technologies that are completely different from my 
+                                background. Although it’s been a shift, I’ve been able to adapt and am thoroughly enjoying 
+                                the experience of working with something new.
+                            </li>
+                            <li className="pb-6">
+                                I’m especially excited to share that, due to my hard work and dedication, I was 
+                                named Rising Star of the Year 2025 during the annual day celebration at Taj Lands, 
+                                Mumbai. This recognition has motivated me even more, and I look forward to contributing 
+                                further to development and increasing productivity in the days ahead.
+                            </li>
+                        </ul>
+
+                        <ul className=" list-disc mb-8">
+                            <span className="text-gray-400 select-none font-semibold mb-1 ">Past Experience</span>
+                            <li className="pb-12">
                                 During my project internship at the
                                 <span className=" bg-gradient-to-tr font-bold from-violet-500 via-fuchsia-400 to-purple-500 bg-clip-text text-transparent text-xl  mx-1 ">
                                    National Informatics Center (NIC),
                                 </span>
-                                I have been instrumental in migrating Maharashtra Government Websites
-                                to the S3WaaS Framework. My tasks involve content migration, following GIGW guidelines,
-                                conducting website audits, and preparing detailed reports. 
-                                This experience has honed my skills in web development, project management,
-                                and adherence to industry standards.
+                                I was instrumental in migrating Maharashtra Government websites to the S3WaaS Framework. 
+                                My responsibilities included content migration, adhering to GIGW guidelines, conducting website 
+                                audits, and preparing detailed reports. This experience helped me refine my skills in web 
+                                development, project management, and compliance with industry standards.
                             </li>
                             <li className="pb-6">
                                 As an esteemed member of
@@ -65,9 +83,16 @@ export default function About() {
                                     <span className=" text-red-400 mr-1">e</span>
                                     DSC 
                                 </span>
-                                for my college campus, I possess the necessary knowledge and expertise to undertake diverse projects. My proficiency spans from developing customized websites to optimizing existing systems and constructing robust machine learning models.
+                                for my college campus, I possessed the necessary knowledge and expertise to undertake 
+                                diverse projects. My proficiency ranged from developing customized websites to optimizing 
+                                existing systems and building robust machine learning models.
                             </li>
-                            <p className="mb-2" >Irrespective of project scale, I consistently bring my best efforts, infused with a healthy dose of creativity. My primary focus lies in constructing dynamic websites, designing systems, composing engineering assignments, and diligently exploring and acquainting myself with emerging technologies.</p>
+                            <p className="mb-2" >
+                                Irrespective of the project scale, I consistently brought my best efforts, 
+                                infused with a healthy dose of creativity. My primary focus was on constructing dynamic 
+                                websites, designing systems, composing engineering assignments, and diligently 
+                                exploring and familiarizing myself with emerging technologies.
+                                </p>
                         </ul>
 
 

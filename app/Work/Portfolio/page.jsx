@@ -25,10 +25,10 @@ const Portfolio = () => {
           33vw"
                             loading="lazy"
                             alt="work info"
-                            className="rounded-2xl mx-auto border-purple-100 shadow-2xl drop-shadow-md border-2 "
+                            className="rounded-2xl mx-auto border-orange-100 shadow-2xl drop-shadow-md border-2 "
                         />
                     </div>
-                    <div className=" mt-6 md:mt-8 lg:mt-10  text-purple-800 flex w-[50%] mx-auto flex-row space-x-16 md:space-x-20 justify-center">
+                    <div className=" mt-6 md:mt-8 lg:mt-10  text-orange-600 flex w-[50%] mx-auto flex-row space-x-16 md:space-x-20 justify-center">
                         <SiJavascript className="  w-4 h-4  md:h-5   md:w-5 md:rounded-[0.1rem] " />
                         <IoLogoReact className="  w-4 h-4  md:h-5   md:w-5 md:rounded-[0.1rem] " />
                         <SiNextdotjs className="  w-4 h-4  md:h-5   md:w-5 md:rounded-[0.1rem] " />
@@ -58,7 +58,7 @@ const Portfolio = () => {
                     in finding internships and job opportunities in the future.
                     </p>
                     <div className="grid grid-cols font-medium md:grid-cols-2 gap-2 text-xs sm:text-sm lg:text-base text-[450] mx-auto items-center md:gap-x-20 lg:gap-x-28 justify-center mt-8 mb-16">
-                        <div className="hover:text-purple-400 flex mx-auto space-x-2 md:space-x-3 items-center">
+                        <div className="hover:text-orange-400 flex mx-auto space-x-2 md:space-x-3 items-center">
                             <SiGithub className=" w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                             <a
                                 href="https://github.com/Rahil2892/portfolio_2.0"
@@ -68,7 +68,7 @@ const Portfolio = () => {
                                 source code{' '}
                             </a>
                         </div>
-                        <button className="hover:text-purple-400 flex mx-auto space-x-2 md:space-x-3 items-center">
+                        <button className="hover:text-orange-400 flex mx-auto space-x-2 md:space-x-3 items-center">
                             <IoBrowsersOutline className=" w-[0.73rem] h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                             <p
                                 onClick={() => {

@@ -17,6 +17,26 @@ export default function Work() {
                 </div>
                 <div className="mt-12 mb-16 flex flex-col space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-12 mx-auto items-center w-full md:w-[85%] lg:w-[80%]">
                     <WorkCard
+                        title={'VAsT'}
+                        link={'/Work/VAsT'}
+                        description={`A tool to help developers discover vulnerabilities and generate detailed reports for the same. 🧑‍💻⚠️`}
+                        arr={[null, null, null, 1, 1, null, null, null, null, null, 1]}
+                        img={'/assets/images/VAsT.png'}
+                        alt={"VAsT-website"}
+                        
+                    />
+
+                    <WorkCard
+                        title={'FirstLightEvents'}
+                        link={'/Work/FirstLightEvents'}
+                        description={`Clean and Beautiful design website for a event companies portfolio. 🌟🎨`}
+                        arr={[1, null, null, 1, 1, null, null, null]}
+                        img={'/assets/images/events-site.png'}
+                        alt={"event-website"}
+                        
+                    />
+
+                    <WorkCard
                         title={'Portfolio'}
                         link={'/Work/Portfolio'}
                         description={`full of life & colorful website you're seeing right now, is also a work of mine 😁😉`}

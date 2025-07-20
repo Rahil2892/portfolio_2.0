@@ -65,13 +65,7 @@ const Home = () => {
               </h2>
           </div>
           <p className="mt-12 px-10 xs:px-0 text-[0.9rem] xs:text-base md:text-[1.1rem] lg:text-[1.1rem] xl:text-[1.1rem] tracking-[0.02rem] max-w-lg ">
-              Web developer, <span className="font-semibold text-blue-400 ">G</span>
-              <span className="font-semibold text-red-400">o</span>
-              <span className="font-semibold text-yellow-500">o</span>
-              <span className="font-semibold text-blue-400">g</span>
-              <span className="font-semibold text-green-400">l</span>
-              <span className="font-semibold text-red-400">e</span> DSC member,
-              UI/UX designer and a lifelong learner based in{' '}
+              Web developer, UI/UX designer and a lifelong learner based in{' '}
               <span className="font-semibold select-none animate-text bg-gradient-to-br from-[#ff911b] dark:from-[#ff8400] via-[#fff4f4] dark:via-[#fff] dark:text-black  text-border2 to-[#43ff36] dark:to-[#12ff02] rounded-full px-2 py-[0.05rem] ">
                   India
               </span>
